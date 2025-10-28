@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+// style4.scss
+div{
+  height:50px;
+  margin-bottom:10px;
+  background:pink;
+}
+
+//1부터 5까지 반복 실행 
+// @for $i from 1 to 6{
+//   div:nth-of-type(#{$i}){
+//     width:50px*$i; //50씩 증가
+    /*
+      50*1=50
+      50*2=100
+      50*3=150
+      50*4=200
+      50*5=250
+    */ 
+//   }
+// }
+
+@for $i from 1 through 6{
+  div:nth-of-type(#{$i}){
+    width:100px*$i; //50씩 증가
+  }
+}
+
+.qna .searchbox {
+  display: flex;
+  justify-content: flex-end; /* ✅ 오른쪽 정렬 */
+  align-items: center;       /* 세로 가운데 정렬 */
+  background: #f4f4f2;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 35px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.qna .searchbox input[type="search"] {
+  width: 200px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.faq {
+  border-top: 1px solid #333;   /* 상단 두꺼운 줄 */
+  border-bottom: 1px solid #333; /* 하단 두꺼운 줄 */
+}
+
+.faq dd {
+  display: none; /* 처음엔 숨김 */
+  background: #eee;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq dt {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq dt i {
+  float: right;
+  transition: transform 0.1s;
+  color:#0a0a0a;
+}
+
+// 기본 스타일
+.qna {
+  width: 800px;
+  margin: 30px;
+  font-family: "맑은 고딕", sans-serif;
+
+  h3 {
+    color: #0a0a0a; 
+  }
+
+  .green{
+    color: rgb(2, 88, 2);
+    font-weight: 500;
+  }
+
+  .searchbox{
+    background: #f4f4f2;
+    padding: 15px 20px;
+    border-radius: 3px;
+    margin-bottom: 35px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .black{
+    background:#6d6d6d;
+    color:#f4f4f2;
+    margin-left:11px;
+    padding:4px 8px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: pointer;
+
+  }
+
+  dl {
+    margin-top: 10px;
+
+    dt, dd {
+      padding: 5px;
+      margin: 0; // 
+      font-size: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+
+// 반복문을 사용해 7개의 Q&A 항목에 스타일 적용
+@for $i from 1 through 10 {
+  // 질문 (dt) – 글자색 초록
+  .qna dl dt:nth-of-type(#{$i}) {
+    color: rgb(2, 88, 2);
+    font-weight: bold;
+  }
+
+  // 답변 (dd) – 배경색 회색
+  .qna dl dd:nth-of-type(#{$i}) {
+    background-color: #eee;
+    color: rgb(97, 97, 97);
+  }
+}

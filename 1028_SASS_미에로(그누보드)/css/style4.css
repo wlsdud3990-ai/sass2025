@@ -1,0 +1,224 @@
+@charset "UTF-8";
+div {
+  height: 50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+/*
+  50*1=50
+  50*2=100
+  50*3=150
+  50*4=200
+  50*5=250
+*/
+div:nth-of-type(1) {
+  width: 100px;
+}
+
+div:nth-of-type(2) {
+  width: 200px;
+}
+
+div:nth-of-type(3) {
+  width: 300px;
+}
+
+div:nth-of-type(4) {
+  width: 400px;
+}
+
+div:nth-of-type(5) {
+  width: 500px;
+}
+
+div:nth-of-type(6) {
+  width: 600px;
+}
+
+.qna .searchbox {
+  display: flex;
+  justify-content: flex-end; /* ✅ 오른쪽 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  background: #f4f4f2;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 35px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.qna .searchbox input[type=search] {
+  width: 200px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.faq {
+  border-top: 1px solid #333; /* 상단 두꺼운 줄 */
+  border-bottom: 1px solid #333; /* 하단 두꺼운 줄 */
+}
+
+.faq dd {
+  display: none; /* 처음엔 숨김 */
+  background: #eee;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq dt {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq dt i {
+  float: right;
+  transition: transform 0.1s;
+  color: #0a0a0a;
+}
+
+.qna {
+  width: 800px;
+  margin: 30px;
+  font-family: "맑은 고딕", sans-serif;
+}
+.qna h3 {
+  color: #0a0a0a;
+}
+.qna .green {
+  color: rgb(2, 88, 2);
+  font-weight: 500;
+}
+.qna .searchbox {
+  background: #f4f4f2;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 35px;
+  height: 30px;
+  line-height: 30px;
+}
+.qna .black {
+  background: #6d6d6d;
+  color: #f4f4f2;
+  margin-left: 11px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.qna dl {
+  margin-top: 10px;
+}
+.qna dl dt, .qna dl dd {
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.qna dl dt:nth-of-type(1) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(1) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(2) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(2) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(3) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(3) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(4) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(4) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(5) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(5) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(6) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(6) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(7) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(7) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(8) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(8) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(9) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(9) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}
+
+.qna dl dt:nth-of-type(10) {
+  color: rgb(2, 88, 2);
+  font-weight: bold;
+}
+
+.qna dl dd:nth-of-type(10) {
+  background-color: #eee;
+  color: rgb(97, 97, 97);
+}/*# sourceMappingURL=style4.css.map */

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>04_sass문법_반복문(while, do while, for)</title>
+ <link href="./css/style4.css" rel="stylesheet" type="text/css">
+  <!-- 아이콘폰트 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+ <h2>04_sass문법_반복문(while, each, for)</h2>
+ <ul>
+  <li>for</li>
+  <li>while</li>
+  <li>each</li>
+ </ul>
+
+ <h3>1. @for문</h3>
+ <p>@for 키워드는 스타일을 반복적으로 출력하는데 사용됩니다.</p>
+ <p>javascript의 for문과 유사합니다.</p>
+ <pre>
+  문법1)
+  trough : 종료만큼 반복
+  @for $변수 from 시작 through 종료 {
+    //반복할 내용
+  }
+
+  문법2)
+  to : 종료 전까지 반복
+  @for $변수 from 시작 to 종료 {
+    //반복할 내용
+  }
+ </pre> 
+<p>$변수 => #{변수}</p>
+<p>#{변수}는 코드 어디든지 변수 값을 사용할 수 있습니다.</p>
+<p>적용 예) $img:unquote('./img/#{$img}');</p>
+<p>h1{background-image:url('./img/#{$img}');}</p>
+
+ <h3>@for문 실습 - through</h3>
+ <p>div태그가 가로폭을 50px ~ 250px까지 각각 서식이 적용되게 하기</p>
+
+ <div>1</div>
+ <div>2</div>
+ <div>3</div>
+ <div>4</div>
+ <div>5</div>
+
+ <p>through는 마지막 번째까지 서식이 적용되고, to는 마지막 바로 전까지만 서식이 적용됨.</p>
+
+ <h3>2. @while문</h3>
+
+ <h3>3. @each문</h3>
+
+
+
+ <h3>실습예제 - 스타벅스 질문과 답변 목록 반복문을 사용하여 제목은 글자색 '초록', 답변에는 배경색 '회색'을 적용하기</h3>
+
+
+  <article class="qna">
+   <h3>자주하는 질문</h3>
+   <p><span class="green">스타벅스 카드</span>에 대한 궁금점이 많으신가요? 고객님의 문의사항에 대한 답변을 빠르게 찾으실 수 있습니다.</p>
+   <p class="searchbox">
+    <input type="search" id="search"><label for="search"><span class="black">검색</span></label>
+   </p>
+
+   <dl class="faq">
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+    <dt>Q. 질문 <i class="fas fa-angle-down"></i></dt>
+    <dd>A. 답변</dd>
+   </dl>
+
+
+ <!-- <div class="q">1. Sass란?</div>
+<div class="a">Sass는 CSS를 더 효율적으로 작성할 수 있는 전처리기입니다.</div>
+
+<div class="q">2. @for문이란?</div>
+<div class="a">@for문은 반복적으로 스타일을 생성할 때 사용됩니다.</div>
+
+<div class="q">3. through와 to의 차이?</div>
+<div class="a">through는 종료값 포함, to는 종료값 미포함입니다.</div> -->
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  // ✅ 페이지 로드 시 첫 번째 항목은 기본으로 열림
+  $(".faq dd:first").show();             // 첫 번째 답변 보이기
+  $(".faq dt:first i").addClass("rotate"); // 화살표 위로 회전
+
+  $(".faq dt").click(function(){
+    let answer = $(this).next("dd"); // 클릭한 dt의 다음 dd
+    let icon = $(this).find("i"); // 화살표 아이콘
+
+    // 다른 열린 항목 닫기
+    $(".faq dd").not(answer).slideUp();
+    $(".faq dt i").not(icon).removeClass("rotate");
+
+    // 클릭한 항목 토글
+    answer.slideToggle();
+    icon.toggleClass("rotate");
+  });
+
+});
+</script>
+
+</body>
+</html>
