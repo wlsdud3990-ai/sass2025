@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.list h3 {
+  color: #333;
+  padding: 14px;
+  margin: 10px;
+  border: 1px solid #f00;
+  font-family: "궁서체";
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+.list ul {
+  margin: 0px;
+  padding: 0px;
+}
+.list ul > li {
+  list-style: none;
+  margin: 10px 0px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  line-height: 40px;
+}
+.list ul > li > a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.list ul > li > a:hover {
+  background: #ff0;
+}
+
+article {
+  width: 470px;
+  height: 222px;
+  border: 1px solid #0081a1;
+}
+article > h3 {
+  display: none;
+}
+article > .tab {
+  display: flex;
+  justify-content: space-between;
+}
+article > .tab img {
+  width: 100%;
+}
+article > .tab ul {
+  margin: 0px;
+  padding: 0px;
+  height: 140px;
+}
+article > .tab ul > li {
+  list-style: none;
+  height: 40%;
+}
+article > .tab ul > li > a {
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  line-height: 55px;
+  display: inline-block;
+  width: 248px;
+  font-size: 12px;
+}
+article > .tab ul > li > a.act {
+  background: #0081a1;
+  color: #fff;
+  line-height: 55px;
+}/*# sourceMappingURL=style2.css.map */
